@@ -52,13 +52,17 @@ export const DrawerComponent = ({ toggleDrawer, open }) => {
           <ChevronLeftIcon />
         </IconButton>
       </Toolbar>
-      <Divider />
+      <Divider
+        sx={{
+          opacity: 0.2,
+        }}
+      />
       {/* List items */}
       <List component="nav">
         <ListEstaciones />
-        <Divider sx={{ my: 1 }} />
+        <Divider sx={{ my: 1, opacity: 0.2 }} />
         <ListCapas />
-        <Divider sx={{ my: 1 }} />
+        <Divider sx={{ my: 1, opacity: 0.2 }} />
       </List>
     </Drawer>
   );

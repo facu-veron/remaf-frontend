@@ -11,6 +11,8 @@ import { AppBarComponent } from "./AppBar";
 import { useState } from "react";
 import { Graphic } from "../Graphic";
 import { Maps } from "./Maps";
+import { Title } from "../common/Title";
+import { TextComponent } from "../common/TextComponent";
 
 const mdTheme = createTheme();
 
@@ -73,7 +75,8 @@ export const Dashboard = () => {
                     height: "auto",
                   }}
                 >
-                  <Typography></Typography>
+                  <Title value="Estaciones:"></Title>
+                  <TextComponent value="Estacion 1" />
                 </Paper>
               </Grid>
               {/* Datos estadisticos */}
