@@ -51,19 +51,7 @@ export const Dashboard = () => {
             <Grid container spacing={3}>
               {/* Mapa */}
 
-              <Grid item xs={12} md={8} lg={9}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-
-                    height: 500,
-                  }}
-                >
-                  <Maps />
-                </Paper>
-              </Grid>
+              <Maps value="http://192.168.224.186:8080/mapstore/embedded.html#83" />
               {/* Informacion adicional */}
               <Grid item xs={12} md={4} lg={3}>
                 <Paper
