@@ -5,7 +5,8 @@ import MuiDrawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
-import { ListCapas } from "./Listcapas";
+import { ListCapas } from "./ListCapas";
+import { ListEstaciones } from "./ListEstaciones";
 
 const drawerWidth = 240;
 
@@ -52,12 +53,12 @@ export const DrawerComponent = ({ toggleDrawer, open }) => {
         </IconButton>
       </Toolbar>
       <Divider />
+      {/* List items */}
       <List component="nav">
+        <ListEstaciones />
+        <Divider sx={{ my: 1 }} />
         <ListCapas />
-        <title>Items</title>
-        {/*  {mainListItems}
-      <Divider sx={{ my: 1 }} />
-      {secondaryListItems} */}
+        <Divider sx={{ my: 1 }} />
       </List>
     </Drawer>
   );

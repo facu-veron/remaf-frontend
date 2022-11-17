@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 
 import { Dashboard } from "./components/layouts/Dashboard";
 import { Maps } from "./components/layouts/Maps";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Dashboard />
+    <BrowserRouter>
+      <Dashboard />
+    </BrowserRouter>
   </React.StrictMode>
 );
