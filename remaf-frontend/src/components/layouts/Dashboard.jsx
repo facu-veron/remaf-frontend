@@ -13,6 +13,9 @@ import { Graphic } from "../Graphic";
 import { Maps } from "./Maps";
 import { Title } from "../common/Title";
 import { TextComponent } from "../common/TextComponent";
+import { HumidityGraph } from "../graphics/HumidityGraph";
+import { TemperatureGraph } from "../graphics/TemperatureGraph";
+import { PrecipitationGraph } from "../graphics/PrecipitationGraph";
 
 const mdTheme = createTheme();
 
@@ -68,18 +71,10 @@ export const Dashboard = () => {
                 </Paper>
               </Grid>
               {/* Datos estadisticos */}
-              <Grid item xs={12} md={8} lg={9}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 240,
-                  }}
-                >
-                  <Graphic />
-                </Paper>
-              </Grid>
+              <HumidityGraph />
+              <TemperatureGraph />
+              <PrecipitationGraph />
+              {/* Datos estadisticos */}
             </Grid>
           </Container>
         </Box>

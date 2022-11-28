@@ -1,4 +1,5 @@
-import React from "react";
+import { Grid, Paper } from "@mui/material";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -8,7 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Title } from "./common/Title";
+import { Title } from "../common/Title";
 
 import { Line } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
@@ -51,12 +52,20 @@ export const data = {
     },
   ],
 };
-
-export const Graphic = () => {
+export const HumidityGraph = () => {
   return (
-    <>
-      <Title value="Temperatura maxima y minima (°C) " />
-      <Line options={options} data={data} />
-    </>
+    <Grid item xs={12} md={8} lg={9}>
+      <Paper
+        sx={{
+          p: 2,
+          display: "flex",
+          flexDirection: "column",
+          height: "auto",
+        }}
+      >
+        <Title value="Temperatura maxima y minima (°C) " />
+        <Line options={options} data={data} />
+      </Paper>
+    </Grid>
   );
 };

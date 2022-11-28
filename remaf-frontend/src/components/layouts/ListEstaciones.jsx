@@ -63,6 +63,62 @@ export const ListEstaciones = () => {
             <ListItemText primary="Estacion 4" />
           </ListItemButton>
         </List>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <ParkIcon />
+            </ListItemIcon>
+            <ListItemText primary="Estacion 5" />
+          </ListItemButton>
+        </List>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <ParkIcon />
+            </ListItemIcon>
+            <ListItemText primary="Estacion 6" />
+          </ListItemButton>
+        </List>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <ParkIcon />
+            </ListItemIcon>
+            <ListItemText primary="Estacion 7" />
+          </ListItemButton>
+        </List>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <ParkIcon />
+            </ListItemIcon>
+            <ListItemText primary="Estacion 8" />
+          </ListItemButton>
+        </List>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <ParkIcon />
+            </ListItemIcon>
+            <ListItemText primary="Estacion 9" />
+          </ListItemButton>
+        </List>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <ParkIcon />
+            </ListItemIcon>
+            <ListItemText primary="Estacion 10" />
+          </ListItemButton>
+        </List>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <ParkIcon />
+            </ListItemIcon>
+            <ListItemText primary="Estacion 11" />
+          </ListItemButton>
+        </List>
       </Collapse>
     </List>
   );
