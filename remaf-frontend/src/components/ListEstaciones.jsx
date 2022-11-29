@@ -6,7 +6,6 @@ import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import ForestIcon from "@mui/icons-material/Forest";
-import LayersIcon from "@mui/icons-material/Layers";
 import ParkIcon from "@mui/icons-material/Park";
 import { useState } from "react";
 

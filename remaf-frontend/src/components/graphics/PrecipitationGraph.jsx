@@ -63,7 +63,7 @@ export const PrecipitationGraph = () => {
           height: "auto",
         }}
       >
-        <Title value="Temperatura maxima y minima (°C) " />
+        <Title value="Precipitacion maxima y minima (l/m²) " />
         <Line options={options} data={data} />
       </Paper>
     </Grid>

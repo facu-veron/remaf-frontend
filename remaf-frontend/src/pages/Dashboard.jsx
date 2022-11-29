@@ -2,20 +2,18 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
-import { DrawerComponent } from "./Drawer";
-import { AppBarComponent } from "./AppBar";
+import { DrawerComponent } from "../components/Drawer";
+import { AppBarComponent } from "../components/AppBar";
 import { useState } from "react";
-import { Graphic } from "../Graphic";
-import { Maps } from "./Maps";
-import { Title } from "../common/Title";
-import { TextComponent } from "../common/TextComponent";
-import { HumidityGraph } from "../graphics/HumidityGraph";
-import { TemperatureGraph } from "../graphics/TemperatureGraph";
-import { PrecipitationGraph } from "../graphics/PrecipitationGraph";
+import { Maps } from "../components/Maps";
+import { Title } from "../components/common/Title";
+import { TextComponent } from "../components/common/TextComponent";
+import { HumidityGraph } from "../components/graphics/HumidityGraph";
+import { TemperatureGraph } from "../components/graphics/TemperatureGraph";
+import { PrecipitationGraph } from "../components/graphics/PrecipitationGraph";
 
 const mdTheme = createTheme();
 
@@ -35,7 +33,6 @@ export const Dashboard = () => {
 
         {/* Drawer */}
         <DrawerComponent toggleDrawer={toggleDrawer} open={open} />
-
         {/* Drawer */}
         <Box
           component="main"
@@ -54,7 +51,8 @@ export const Dashboard = () => {
             <Grid container spacing={3}>
               {/* Mapa */}
 
-              <Maps value="http://192.168.224.186:8080/mapstore/embedded.html#83" />
+              <Maps value="http://25.60.214.193:8080/mapstore/#/context/remaf_casa" />
+
               {/* Informacion adicional */}
               <Grid item xs={12} md={4} lg={3}>
                 <Paper

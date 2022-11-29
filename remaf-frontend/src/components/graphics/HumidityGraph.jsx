@@ -63,7 +63,7 @@ export const HumidityGraph = () => {
           height: "auto",
         }}
       >
-        <Title value="Temperatura maxima y minima (°C) " />
+        <Title value="Humedad maxima y minima  (Hr) " />
         <Line options={options} data={data} />
       </Paper>
     </Grid>

@@ -1,11 +1,9 @@
 import styled from "@emotion/styled";
 import MuiAppBar from "@mui/material/AppBar";
-import { useState } from "react";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
-import { Avatar, Toolbar, Typography } from "@mui/material";
-import { deepOrange } from "@mui/material/colors";
+import { Toolbar, Typography } from "@mui/material";
 
 const drawerWidth = 240;
 

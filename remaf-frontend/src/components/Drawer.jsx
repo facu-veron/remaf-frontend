@@ -4,9 +4,8 @@ import MuiDrawer from "@mui/material/Drawer";
 
 import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-
-import { ListCapas } from "./ListCapas";
 import { ListEstaciones } from "./ListEstaciones";
+import { ListCapas } from "./Listcapas";
 
 const drawerWidth = 240;
 
