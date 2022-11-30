@@ -5,9 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./style.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Dashboard />
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <Dashboard />
+  </BrowserRouter>
 );

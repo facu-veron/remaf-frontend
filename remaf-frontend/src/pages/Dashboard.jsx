@@ -14,6 +14,7 @@ import { TextComponent } from "../components/common/TextComponent";
 import { HumidityGraph } from "../components/graphics/HumidityGraph";
 import { TemperatureGraph } from "../components/graphics/TemperatureGraph";
 import { PrecipitationGraph } from "../components/graphics/PrecipitationGraph";
+import InformationCard from "../components/InformationCard";
 
 const mdTheme = createTheme();
 
@@ -54,20 +55,9 @@ export const Dashboard = () => {
               <Maps value="http://25.60.214.193:8080/mapstore/#/context/remaf_casa" />
 
               {/* Informacion adicional */}
-              <Grid item xs={12} md={4} lg={3}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    width: 240,
-                    height: "auto",
-                  }}
-                >
-                  <Title value="Estaciones:"></Title>
-                  <TextComponent value="Estacion 1" />
-                </Paper>
-              </Grid>
+              <InformationCard />
+              {/* Informacion adicional */}
+
               {/* Datos estadisticos */}
               <HumidityGraph />
               <TemperatureGraph />

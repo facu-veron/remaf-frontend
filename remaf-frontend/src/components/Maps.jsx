@@ -1,14 +1,17 @@
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loader from "../static/Loader";
 
 export const Maps = ({ value }) => {
   const [loader, setloader] = useState(true);
 
-  setTimeout(() => {
-    setloader(false);
-  }, 5000);
+  useEffect(() => {
+    setTimeout(() => {
+      setloader(false);
+    }, 20000);
+  }, []);
+
   return (
     <Grid item xs={12} md={8} lg={9}>
       <Paper

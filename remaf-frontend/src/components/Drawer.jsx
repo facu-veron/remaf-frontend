@@ -4,7 +4,7 @@ import MuiDrawer from "@mui/material/Drawer";
 
 import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import { ListEstaciones } from "./ListEstaciones";
+import { ListStations } from "./ListStation";
 import { ListCapas } from "./Listcapas";
 
 const drawerWidth = 240;
@@ -36,7 +36,6 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export const DrawerComponent = ({ toggleDrawer, open }) => {
-  console.log(toggleDrawer);
   return (
     <Drawer variant="permanent" open={open}>
       <Toolbar
@@ -58,7 +57,7 @@ export const DrawerComponent = ({ toggleDrawer, open }) => {
       />
       {/* List items */}
       <List component="nav">
-        <ListEstaciones />
+        <ListStations />
         <Divider sx={{ my: 1, opacity: 0.2 }} />
         <ListCapas />
         <Divider sx={{ my: 1, opacity: 0.2 }} />
