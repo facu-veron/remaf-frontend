@@ -6,16 +6,13 @@ import ListItemText from "@mui/material/ListItemText";
 import { useEffect, useState } from "react";
 
 export const ListItemButtonComponent = ({ title, id }) => {
-  let idValues = id;
+  let idValue = id;
 
-  const [idValue, setIdValue] = useState(0);
-
-  const handleClickButton = (idValues) => {
-    console.log(idValues);
-    setIdValue(idValues);
+  const handleClickButton = (idValue) => {
+    console.log(idValue);
   };
 
-  useEffect(() => {}, [idValues]);
+  useEffect(() => {}, [idValue]);
 
   return (
     <List>

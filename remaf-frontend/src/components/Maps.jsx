@@ -4,12 +4,18 @@ import { useEffect, useState } from "react";
 import Loader from "../static/Loader";
 
 export const Maps = ({ value }) => {
-  const [loader, setloader] = useState(true);
+  const [loader, setLoader] = useState(true);
+
+  const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setloader(false);
-    }, 20000);
+      setLoader(false);
+      setDisabled(true);
+    }, 8000);
+    return () => {
+      second;
+    };
   }, []);
 
   return (
@@ -19,18 +25,16 @@ export const Maps = ({ value }) => {
           p: 2,
           display: "flex",
           flexDirection: "column",
-
           height: 500,
         }}
       >
-        {loader ? (
-          <Loader />
-        ) : (
-          <iframe
-            className="iframe animate__animated animate__fadeIn"
-            src={value}
-          ></iframe>
-        )}
+        {!disabled && <Loader />}
+
+        <iframe
+          style={{ display: disabled ? "block" : "none" }}
+          className="iframe animate__animated animate__fadeIn"
+          src={value}
+        ></iframe>
       </Paper>
     </Grid>
   );
