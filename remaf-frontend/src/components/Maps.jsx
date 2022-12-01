@@ -2,7 +2,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import { useEffect, useState } from "react";
 import Loader from "../static/Loader";
-
+import "animate.css";
 export const Maps = ({ value }) => {
   const [loader, setLoader] = useState(true);
 
@@ -21,6 +21,8 @@ export const Maps = ({ value }) => {
   return (
     <Grid item xs={12} md={8} lg={9}>
       <Paper
+        className="iframe animate__animated animate__fadeIn animate__delay-2s 
+      animate__slower	3s animate__repeat-3"
         sx={{
           p: 2,
           display: "flex",
