@@ -4,13 +4,10 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 import { DrawerComponent } from "../components/Drawer";
 import { AppBarComponent } from "../components/AppBar";
 import { useState } from "react";
 import { Maps } from "../components/Maps";
-import { Title } from "../components/common/Title";
-import { TextComponent } from "../components/common/TextComponent";
 import { HumidityGraph } from "../components/graphics/HumidityGraph";
 import { TemperatureGraph } from "../components/graphics/TemperatureGraph";
 import { PrecipitationGraph } from "../components/graphics/PrecipitationGraph";
@@ -52,7 +49,7 @@ export const Dashboard = () => {
             <Grid container spacing={3}>
               {/* Mapa */}
 
-              <Maps value="http://25.60.214.193:8080/mapstore/#/context/remaf_casa" />
+              <Maps value="http://25.60.214.193:8080/mapstore/#/context/remaf_casa?center=-58.36493142796677,-26.14016856640275&zoom=15" />
 
               {/* Informacion adicional */}
               <InformationCard />

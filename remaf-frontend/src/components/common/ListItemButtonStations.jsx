@@ -3,16 +3,19 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ParkIcon from "@mui/icons-material/Park";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { useEffect } from "react";
+import { useGetInfoStations } from "../../hooks/useGetInfoStations";
+import InformationCard from "../InformationCard";
+useGetInfoStations;
 
 export const ListItemButtonStations = ({ title, id }) => {
-  let idValue = id;
+  const { information } = useGetInfoStations();
 
   const handleClickButton = (idValue) => {
+    information(idValue);
+    console.log(information(idValue));
     console.log(idValue);
+    return <InformationCard />;
   };
-
-  useEffect(() => {}, [idValue]);
 
   return (
     <List>

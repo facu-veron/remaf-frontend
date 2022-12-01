@@ -1,8 +1,13 @@
 import { Grid, Paper } from "@mui/material";
+import { useGetInfoStations } from "../hooks/useGetInfoStations";
 import { TextComponent } from "./common/TextComponent";
 import { Title } from "./common/Title";
 
 const InformationCard = () => {
+  const { information } = useGetInfoStations();
+
+  const initialState = information();
+  const [update, setUpdate] = useState(initialState);
   return (
     <Grid item xs={12} md={4} lg={3}>
       <Paper
