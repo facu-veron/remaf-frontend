@@ -11,7 +11,7 @@ export const useGetInfoStations = () => {
     return data;
   };
 
-  console.log(" infostation ", infoStation.nombre);
+  console.log(" infostation ", infoStation);
   return {
     ...infoStation,
     infoStation,

@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid";
 import { DrawerComponent } from "../components/Drawer";
 import { AppBarComponent } from "../components/AppBar";
 import { useState } from "react";
-import { Maps } from "../components/Maps";
+import  Maps  from "../components/Maps";
 import { HumidityGraph } from "../components/graphics/HumidityGraph";
 import { TemperatureGraph } from "../components/graphics/TemperatureGraph";
 import { PrecipitationGraph } from "../components/graphics/PrecipitationGraph";
@@ -23,7 +23,7 @@ export const Dashboard = () => {
 
   return (
     <ThemeProvider theme={mdTheme}>
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex", height: "100vh"}}>
         <CssBaseline />
         {/* AppBar */}
         <AppBarComponent toggleDrawer={toggleDrawer} open={open} />
@@ -49,7 +49,7 @@ export const Dashboard = () => {
             <Grid container spacing={3}>
               {/* Mapa */}
 
-              <Maps value="http://25.60.214.193:8080/mapstore/#/context/remaf_casa?center=-58.36493142796677,-26.14016856640275&zoom=15" />
+              <Maps />
 
               {/* Informacion adicional */}
               <InformationCard />

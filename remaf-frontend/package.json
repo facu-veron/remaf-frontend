@@ -16,14 +16,19 @@
     "@mui/material": "^5.10.13",
     "@mui/x-data-grid": "^5.17.11",
     "animate.css": "^4.1.1",
+    "axios": "^1.2.0",
     "chart.js": "^4.0.1",
     "leaflet": "^1.9.2",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.0.1",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.1.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",
-    "recharts": "^2.1.16"
+    "recharts": "^2.1.16",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
