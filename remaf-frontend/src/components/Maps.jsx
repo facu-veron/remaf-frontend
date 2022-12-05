@@ -4,18 +4,12 @@ import { useEffect, useState } from "react";
 import Loader from "../static/Loader";
 import "animate.css";
 export const Maps = ({ value }) => {
-  const [loader, setLoader] = useState(true);
-
   const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoader(false);
       setDisabled(true);
     }, 8000);
-    return () => {
-      second;
-    };
   }, []);
 
   return (
