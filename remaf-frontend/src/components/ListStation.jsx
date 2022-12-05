@@ -3,17 +3,41 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
+import ParkIcon from "@mui/icons-material/Park";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import ForestIcon from "@mui/icons-material/Forest";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ListItemButtonStations } from "./common/ListItemButtonStations";
+import { connect } from 'react-redux';
+import { set_estaciones, set_estacion } from "../actions/estaciones_action";
 
-export const ListStations = () => {
+const ListStations = (props) => {
   const [open, setOpen] = useState(true);
+  const [estaciones, setEstaciones] = useState([])
 
   const handleClickDropDown = () => {
     setOpen(!open);
+  };
+
+  useEffect( () => {
+    console.log(props);
+    props.set_estaciones()    
+  }, [])
+
+  useEffect( () => {
+    console.log("hola");
+    
+    setEstaciones(props.datos.estaciones_reducer.estaciones)
+  }, [props.datos.estaciones_reducer.estaciones])
+
+  const handleClickButton = ({id_weather_station, name}) => {
+    //information(idValue);
+    //console.log(information(idValue));
+    console.log("estacion")
+    console.log(id_weather_station)
+    props.set_estacion(id_weather_station, name)
+    
   };
 
   return (
@@ -30,17 +54,31 @@ export const ListStations = () => {
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
-        <ListItemButtonStations title="Estacion 1" id={1} />
-        <ListItemButtonStations title="Estacion 2" id={2} />
-        <ListItemButtonStations title="Estacion 3" id={3} />
-        <ListItemButtonStations title="Estacion 4" id={4} />
-        <ListItemButtonStations title="Estacion 5" id={5} />
-        <ListItemButtonStations title="Estacion 6" id={6} />
-        <ListItemButtonStations title="Estacion 7" id={7} />
-        <ListItemButtonStations title="Estacion 8" id={8} />
-        <ListItemButtonStations title="Estacion 9" id={9} />
-        <ListItemButtonStations title="Estacion 10" id={10} />
+        {console.log(estaciones)}
+        {estaciones.length !== 0 ? estaciones.data.map( (elem) => 
+            <List>
+            <ListItemButton onClick={() => handleClickButton(elem)} sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <ParkIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Estacion " + elem.id_weather_station} />
+            </ListItemButton>
+          </List>
+           
+        ) : ""}
+        
       </Collapse>
     </List>
   );
 };
+
+const mapStateToProps = (state) => {
+  
+  return {
+    "datos": state
+    }
+  
+}
+
+export default connect(mapStateToProps, {set_estaciones, set_estacion})(ListStations)
+
